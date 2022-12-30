@@ -1,0 +1,192 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Surajmk78/python-mini-project/blob/main/Library\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Library:\n",
+        "  def __init__(self,list,name):\n",
+        "    self.booklist = list\n",
+        "    self.name = name\n",
+        "    self.lendbook ={}\n",
+        "\n",
+        "  def diplayBook(self):\n",
+        "    print(f\"we have the following books in our library's name : {self.name}\\n\")\n",
+        "    for book in self.booklist:\n",
+        "      print(book)\n",
+        "\n",
+        "  def lendBook(self,book,user):    \n",
+        "    self.lendbook.update({self.book:self.user})\n",
+        "    self.booklist.remove(self.book)\n",
+        "\n",
+        "  def addBook(self,book):\n",
+        "    self.booklist.append(book2)\n",
+        "\n",
+        "  def returnBook(self,book3):\n",
+        "    # user2 = input(\"enter your name:  \")\n",
+        "    self.lendbook.pop(book3)\n",
+        "    self.booklist.append(book3)\n",
+        "    print(f\"Thanks! you returned book {book3}\")\n",
+        "\n",
+        "lib = Library([\"Focus\",\"rich dad poor dad\",\"Think and grow\",\"zero to one\"],\"Birla \")\n",
+        "while True:\n",
+        "\n",
+        "  welcome = int(input(\"\"\"\\nWelcome to library \\nchoose any option from following\\n\\n1:displayBook (You see list of books)\\n2:lendBook (You can get book on lend here)\\n3:addBook (you can add books here)\\n4:returnBook (you can return book here which you lend)\\nEnter 1,2,3,4   : \"\"\"))\n",
+        "  if welcome == 1:\n",
+        "    lib.diplayBook()\n",
+        "\n",
+        "  elif welcome == 2:\n",
+        "    lib.book = input(\"Enter the boook you want:  \")\n",
+        "    if lib.book in lib.booklist:\n",
+        "      lib.user = input(\"Enter your name:  \")\n",
+        "      lib.lendBook(lib.book,lib.user)\n",
+        "\n",
+        "  elif welcome == 3:\n",
+        "    book2=input(\"Enter the name of book you want to add:  \")\n",
+        "    lib.addBook(book2)\n",
+        "\n",
+        "  elif welcome == 4:\n",
+        "    book3 = input(\"enter the book you want to return:  \")\n",
+        "    if book3 in lib.lendbook:\n",
+        "      user3 = input(\"Uername which tooks book: \")\n",
+        "      if user3 in lib.lendbook.values():\n",
+        "        lib.returnBook(book3)\n",
+        "      else:\n",
+        "        print(\"wrong user \")\n",
+        "\n",
+        "    else:\n",
+        "      print(f\"{book3} book no one lend\")\n",
+        "\n",
+        "\n",
+        "  else:\n",
+        "    print(\"You entered wrong option.\")\n",
+        "  option = input(\"You wawnt use library or not \\nEnter y for yes and n for no:  \")\n",
+        "  # while True:\n",
+        "  #   if option == \"y\":\n",
+        "  #     continue\n",
+        "  #   elif option == \"n\":\n",
+        "  #     break\n",
+        "  #   else:\n",
+        "  #     print(\"Please choose 'y' or 'n' only\")\n",
+        "  break"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DkxjjDnEVU2x",
+        "outputId": "bbbb4a91-3f8a-4f7f-fc99-b3384fd78f30"
+      },
+      "execution_count": 116,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "Welcome to library \n",
+            "choose any option from following\n",
+            "\n",
+            "1:displayBook (You see list of books)\n",
+            "2:lendBook (You can get book on lend here)\n",
+            "3:addBook (you can add books here)\n",
+            "4:returnBook (you can return book here which you lend)\n",
+            "Enter 1,2,3,4   : 1\n",
+            "we have the following books in our library's name : Birla \n",
+            "\n",
+            "Focus\n",
+            "rich dad poor dad\n",
+            "Think and grow\n",
+            "zero to one\n",
+            "You wawnt use library or not \n",
+            "Enter y for yes and n for no:  n\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "flib.lendbook"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "S2yxAGDep57M",
+        "outputId": "57d7ba61-8ab0-47eb-c75f-34cd5f018ec2"
+      },
+      "execution_count": 101,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Focus': 'suraj'}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 101
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict = {\"sss\":\"ddd\"}\n",
+        "uu = input()\n",
+        "if uu in dict.values():\n",
+        "  print(\"ok\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZAFCIoqStsAx",
+        "outputId": "f46acd0d-e720-4bbe-b5a3-728fd0e24a02"
+      },
+      "execution_count": 108,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ddd\n",
+            "ok\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "BhfLDr8QvyFq"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colaboratory",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
